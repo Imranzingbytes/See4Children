@@ -1,0 +1,21 @@
+{% extends 'super_admin/base.html' %}
+{% block content %}
+    <div class="content-wrapper">
+    <section class="content">
+        <h1 style="margin-left: 35%">Send Invoice</h1>
+        <div style="margin-left: 10%">
+            <form method="post">
+            {% csrf_token %}
+                {% for fields in form %}
+                    {{ fields.label_tag }}<br>
+                    {{ fields }}<br>
+                {% endfor %}
+            <br>
+            <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+
+
+    </section>
+    </div>
+{% endblock %}

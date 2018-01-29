@@ -1,0 +1,14 @@
+{% extends 'ngo/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="content-wrapper">
+    <section class="content">
+    <h2>Event Details</h2><hr/>
+
+        <h3><b>Name: </b>{{ form.name }}</h3>
+        <p><b>Date: </b>{{ form.date }}</p>
+        <p><b>Activity: </b>{{ form.type }}</p>
+
+    </section>
+    </div>
+{% endblock %}

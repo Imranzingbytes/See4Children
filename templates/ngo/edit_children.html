@@ -1,0 +1,17 @@
+{% extends 'ngo/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="content-wrapper">
+    <section class="content">
+    <h2>Edit Children</h2><hr/>
+        <form method="post">
+        {% csrf_token %}
+        {% for fields in form %}
+        {{ fields.label_tag }}<br>
+        {{ fields }}<br><br>
+        {% endfor %}
+        <button type="submit" class="btn btn-success">Update</button>
+    </form>
+    </section>
+    </div>
+{% endblock %}
